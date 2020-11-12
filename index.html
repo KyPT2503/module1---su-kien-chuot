@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>index</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+<img id="ball" src="ball.png" alt="ball" width="120" height="120">
+<div>
+    <button type="button" onclick="move(-100)">Left</button>
+    <button type="button" onclick="move(100)">Right</button>
+</div>
+<script>
+    let img=null;
+    function init()
+    {
+        img=document.getElementById('ball');
+        img.style.position='relative';
+        img.style.left='0px';
+    }
+    function move(value)
+    {
+        img.style.left=parseInt(img.style.left)+value+'px';
+    }
+    window.onload=init;
+</script>
+</body>
+</html>
